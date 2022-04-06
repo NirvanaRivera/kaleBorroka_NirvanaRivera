@@ -1,0 +1,472 @@
+/* reset */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+html{
+    background-color: black;
+}
+
+
+/* Elemento raiz de la página */
+.bodyContenido{
+    display: grid;
+    grid-template-areas: "header"
+                         "content"
+                         "footer";
+    background-color: #252424;
+    background-image: url('../img/fondo.jpg');
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* Logo y navegación */
+header {
+    grid-area: header;
+    background-color: #460101;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+header h1{
+    vertical-align: top;
+    color: #e9e5e5;
+    padding: 7px;
+    display: inline-block;
+}
+
+.titulo .logo{
+    display: flex;
+    display: inline-block;
+    width: 50px;
+    margin: 10px;
+}
+
+
+.titulo{
+    justify-content: flex-start;
+    grid-area: titulo;
+}
+
+.menu ul{
+    display: inline;
+
+}
+
+.menu li{
+    display: inline;
+    font-size: 20px;
+    padding: 30px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #cccaca;
+
+}
+
+.menu li a.activo{
+    color: #ffffff;
+    text-shadow: 0 0 4px whitesmoke;
+}
+
+main{
+    grid-area: content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitulo{
+    color: #cccaca;
+    margin-bottom: 10px;
+}
+
+.hamburguesa{
+    display: none;
+}
+
+@media only screen and (min-width:768px) and (max-width: 1023px){
+    header{
+        flex-direction: column;
+    }
+    .menu{
+        padding-bottom: 5px;
+    }
+    main{
+        padding: 0;
+    }
+}
+@media only screen and (max-width:767px){
+
+    header{
+        flex-direction: row;
+    }
+    .menu{
+        display: none;
+    }
+    .hamburguesa{
+        display: flex;
+        padding: 15px;
+    }
+
+    .hamburguesa img{
+        display: inline-block;
+        height: 30px;
+    }
+    main{
+        padding: 0;
+    }
+}
+
+
+
+/* Index */
+#imgPrincipal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+#imgPrincipal img{
+    width: 90%;
+
+}
+
+.videos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #460101;
+    padding: 30px 0;
+}
+
+.video iframe{
+    width: 560px; 
+    height: 315px;
+
+}
+
+.tituloVideo{
+    justify-content: end;
+    width: 30%;
+    font-size: 40px;
+}
+
+@media only screen and (min-width:768px) and (max-width: 1023px){
+    #imgPrincipal{
+        padding: 0;
+        margin: 0;
+
+    }
+
+    #imgPrincipal img{
+        width: 100vw;
+    }
+    .video iframe{
+        width: 28.7rem;
+    }
+}
+@media only screen and (max-width:767px){
+    #imgPrincipal{
+        padding: 0;
+        margin: 0;
+
+    }
+
+    #imgPrincipal img{
+        width: 100vw;
+    }
+
+    .videos{
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+    .tituloVideo{
+        width: unset;
+        font-size: 30px;
+    }
+    .video iframe{
+        width: 26rem;
+    }
+
+}
+
+/* Band info */
+.historia{
+    display: flex;
+    flex-direction: row;
+}
+.historiaTexto{
+    color: #cccaca;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    border-top: 1px solid #cccaca;
+}
+
+.historiaTexto h2{
+    margin-bottom: 0.6rem;
+}
+
+.historiaTexto p{
+    width: 70%;
+}
+
+.historiaImagen{
+    display: flex;
+    justify-content: center;
+    background-color: #460101;
+    width: 39%;
+    padding: 1.5rem;
+    text-align: center;
+    align-self: center;
+}
+
+.historiaImagen img{
+    width: 60%;
+    
+}
+.historiaImagen div{
+    display: none;
+}
+
+@media only screen and (min-width:768px) and (max-width: 1023px){
+    .historiaTexto{
+        padding-left: 2rem;
+    }
+    .historiaImagen{
+        margin: 1rem;
+        width: 60%;
+        align-self: center;
+        
+    }
+}
+@media only screen and (max-width:767px){
+    .historia{
+        flex-direction: column-reverse;
+        margin-bottom: 3rem;
+    }
+    .historiaImagen img{
+        display: none;
+
+    }
+    .historiaTexto{
+        width: 100%;
+        padding: 1rem;
+    }
+    .historiaTexto p{
+        width: 100%;
+    }
+    .historiaImagen{
+        padding: 0;
+        width: 100%;
+    }
+    .historiaImagen div{
+        display: block;
+        width: 100%;
+        height: 10rem;
+        background-size: cover;
+        font-size: 5rem;
+        color: #cccaca;
+        text-shadow: 0 0 5px black;
+        padding-top: 0.6rem;
+    }
+    .historia h2{
+        display: none;
+    }
+}
+
+/* Eventos */
+.eventos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.evento{
+    display: flex;
+    flex-direction: column;
+    background-color: #460101;
+    width: 40%;
+    padding: 1rem;
+    margin: 3rem;
+}
+
+.evento img{
+    width: 100%;
+}
+
+.evento p{
+    background-color: #cccaca;
+    padding: 3px;
+    text-align: center;
+}
+@media only screen and (min-width:768px) and (max-width: 1023px){
+    .evento{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:767px){
+    .evento{
+        width: 100%;
+        padding: 0.7rem;
+        margin: 1rem;
+    }
+}
+
+
+/* Music */
+.canciones{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cancion{
+    display: flex;
+    flex-direction: column;
+    background-color: #cccaca;
+    margin: 1.25rem;
+    width: 21rem;
+}
+
+.tituloCancion{
+    background-color: #460101;
+    padding: 0.2rem;
+    color: #cccaca;
+}
+
+.letraCancion{
+    padding: 0.2rem;
+    overflow-y: scroll;
+    height: 21rem;
+}
+
+.cancion .reproductor audio{
+    width: 100%;
+}
+@media only screen and (max-width:767px){
+    .cancion{
+        width: 100%;
+    }
+    .letraCancion{
+        height: auto;
+        overflow: unset;
+    }
+}
+
+/* Contact Us */
+.formulario{
+    background-color: #cccaca;
+    width: 60%;
+}
+
+.formulario .subtitulo{
+    padding: 0.6rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    background-color: #460101;
+    width: 100%;
+    margin: 0;
+}
+
+.camposFormulario{
+    padding: 15px;
+}
+
+.camposFormulario div{
+    margin-bottom: 10px;
+}
+
+.camposFormulario input{
+    width: 100%;
+}
+
+.camposFormulario textarea{
+    width: 100%;
+}
+
+.boton input{
+    background-color: #460101;
+    color: #cccaca;
+    width: 20%;
+}
+@media only screen and (min-width:768px) and (max-width: 1023px){
+    .formulario{
+        margin: 1rem auto;
+    }
+}
+@media only screen and (max-width:767px){
+    .formulario{
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+/* Pie de página */
+footer{
+    display: flex;
+    grid-area: footer;
+    justify-content: space-between;
+    height: 2.5rem;
+
+}
+
+.logoInsta{
+    vertical-align: middle;
+    height: 80%;
+    margin: 4px;
+}
+
+.linkInsta{
+    text-decoration: none;
+    color: #cccaca;
+}
+
+.copyright{
+    margin-top: 8px;
+    color: #cccaca;
+}
+
+@media only screen and (min-width:768px) and (max-width: 1023px){
+    footer div{
+        padding: 0;
+        display: flex;
+        width: 30%;
+    }
+    .linkInsta{
+        margin-top: 6px;
+    }
+
+} 
+
+@media only screen and (max-width:767px){
+    footer div{
+        padding: 0;
+        display: flex;
+        width: 30%;
+    }
+    .linkInsta{
+        margin-top: 6px;
+    }
+    .instagram .linkInsta{
+        display: none;
+    }
+}
