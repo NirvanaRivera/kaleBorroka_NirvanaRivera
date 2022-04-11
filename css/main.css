@@ -236,11 +236,22 @@ main{
 }
 
 .historiaImagen img{
-    width: 60%;
-    
+    width: 60%;    
 }
+
 .historiaImagen div{
     display: none;
+}
+
+.historiaIngles .historiaImagen div {
+    background-image: url(../img/foto1.jpg);
+}
+
+.historiaEspanol .historiaImagen div{
+    background-image: url(../img/foto3.jpg);
+}
+.historiaEuskera .historiaImagen div{
+    background-image: url(../img/foto2.jpg);
 }
 
 @media only screen and (min-width:768px) and (max-width: 1023px){
