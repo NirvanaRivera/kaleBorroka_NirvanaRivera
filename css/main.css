@@ -26,7 +26,7 @@ html{
 /* Logo y navegación */
 header {
     grid-area: header;
-    background-color: #460101;
+    background-image: linear-gradient(to bottom, #460101, #5c0101);
     position: sticky;
     top: 0;
     display: flex;
@@ -148,7 +148,7 @@ main{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #460101;
+    background-image: linear-gradient(to right, #460101, #2e0101);
     padding: 30px 0;
 }
 
@@ -239,6 +239,12 @@ main{
     width: 60%;    
 }
 
+/* animación imagenes historia */
+.historiaImagen img:hover{
+    transform: scale(1.15);
+    transition: 1.7s;
+}
+
 .historiaImagen div{
     display: none;
 }
@@ -316,6 +322,11 @@ main{
     margin: 3rem;
 }
 
+/* animaciones eventos */
+.evento:hover{
+    transform: scale(1.11);
+    transition: 1.7s;
+}
 .evento img{
     width: 100%;
 }
@@ -354,11 +365,11 @@ main{
 }
 
 .tituloCancion{
-    background-color: #460101;
+    background-image: linear-gradient(to right, #460101, #2e0101);
     padding: 0.2rem;
     color: #cccaca;
-}
 
+}
 .letraCancion{
     padding: 0.2rem;
     overflow-y: scroll;
@@ -393,7 +404,7 @@ main{
 }
 
 .formulario legend{
-    background-color: #460101;
+    background-image: linear-gradient(to right, #460101, #2e0101);
     width: 100%;
     margin: 0;
 }
