@@ -65,7 +65,7 @@ header {
 main{
     grid-area: content;
     /* compenzando por el fixed-top de header de bootstrap */
-    margin-top: 55px;
+    margin-top: 4.2em;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -106,15 +106,9 @@ main{
 
 
 /* Band info */
-.historia{
-    display: flex;
-    flex-direction: row;
-}
+
 .historiaTexto{
     color: #cccaca;
-    display: flex;
-    flex-direction: column;
-    width: 60%;
     border-top: 1px solid #cccaca;
 }
 
@@ -127,13 +121,8 @@ main{
 }
 
 .historiaImagen{
-    display: flex;
-    justify-content: center;
     background-color: #460101;
-    width: 39%;
     padding: 1.5rem;
-    text-align: center;
-    align-self: center;
 }
 
 .historiaImagen img{
@@ -161,36 +150,9 @@ main{
     background-image: url(../img/foto2.jpg);
 }
 
-@media only screen and (min-width:768px) and (max-width: 1023px){
-    .historiaTexto{
-        padding-left: 2rem;
-    }
-    .historiaImagen{
-        margin: 1rem;
-        width: 60%;
-        align-self: center;
-        
-    }
-}
 @media only screen and (max-width:767px){
-    .historia{
-        flex-direction: column-reverse;
-        margin-bottom: 3rem;
-    }
     .historiaImagen img{
         display: none;
-
-    }
-    .historiaTexto{
-        width: 100%;
-        padding: 1rem;
-    }
-    .historiaTexto p{
-        width: 100%;
-    }
-    .historiaImagen{
-        padding: 0;
-        width: 100%;
     }
     .historiaImagen div{
         display: block;
@@ -202,25 +164,27 @@ main{
         text-shadow: 0 0 5px black;
         padding-top: 0.6rem;
     }
+      
+    .historiaImagen{
+        padding: 0;
+        width: 100%;
+    }
+    .historiaTexto{
+        width: 100%;
+        padding: 1rem;
+    }
     .historia h2{
         display: none;
     }
+    .historiaTexto p{
+        width: 100%;
+    }
 }
 
+
 /* Eventos */
-.eventos{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
 .evento{
-    display: flex;
-    flex-direction: column;
     background-color: #460101;
-    width: 40%;
-    padding: 1rem;
-    margin: 3rem;
 }
 
 /* animaciones eventos */
@@ -237,32 +201,24 @@ main{
     padding: 3px;
     text-align: center;
 }
-@media only screen and (min-width:768px) and (max-width: 1023px){
-    .evento{
-        width: 100%;
-    }
-}
+
 @media only screen and (max-width:767px){
     .evento{
-        width: 100%;
-        padding: 0.7rem;
-        margin: 1rem;
+        /* width: 100%; */
+        /* padding: 0.7rem; */
+        margin: 0;
     }
 }
 
 
 /* Music */
-.canciones{
+/* .canciones{
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
 .cancion{
-    display: flex;
-    flex-direction: column;
     background-color: #cccaca;
-    margin: 1.25rem;
-    width: 21rem;
 }
 
 .tituloCancion{
@@ -272,18 +228,11 @@ main{
 
 }
 .letraCancion{
-    padding: 0.2rem;
     overflow-y: scroll;
     height: 21rem;
 }
 
-.cancion .reproductor audio{
-    width: 100%;
-}
 @media only screen and (max-width:767px){
-    .cancion{
-        width: 100%;
-    }
     .letraCancion{
         height: auto;
         overflow: unset;
@@ -293,16 +242,12 @@ main{
 /* Contact Us */
 .formulario{
     background-color: #cccaca;
-    width: 60%;
 }
 
 .formulario .subtitulo{
     padding: 0.6rem;
 }
 
-.formulario fieldset{
-    border: none;
-}
 
 .formulario legend{
     background-image: linear-gradient(to right, #460101, #2e0101);
@@ -310,36 +255,9 @@ main{
     margin: 0;
 }
 
-.camposFormulario{
-    padding: 15px;
-}
-
-.camposFormulario div{
-    margin-bottom: 10px;
-}
-
-.camposFormulario input{
-    width: 100%;
-}
-
-.camposFormulario textarea{
-    width: 100%;
-}
-
-.boton input{
-    background-color: #460101;
-    color: #cccaca;
-    width: 20%;
-}
-@media only screen and (min-width:768px) and (max-width: 1023px){
-    .formulario{
-        margin: 1rem auto;
-    }
-}
 @media only screen and (max-width:767px){
     .formulario{
         margin-top: 1rem;
-        width: 100%;
     }
 }
 

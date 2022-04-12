@@ -44,41 +44,35 @@
         </header>
         <main>
             <!-- formulario de contacto -->
-            <div class="formulario">
-                <form action="">
-                    <fieldset>
-                        <legend>
-                            <h2 class="subtitulo">
-                                Contact Us | Contáctanos | Jarri gurekin harremanetan
-                            </h2>
-                        </legend>
-                        <div class="camposFormulario">
-                            <div>
-                                <label for="nombre">
-                                    Name | Nombre | Izena
-                                </label>
-                                <input type="text" name="nombre">
-                            </div>
-                            <div>
-                                <label for="email">
-                                    Email
-                                </label>
-                                <input type="email" name="email">
-                            </div>
-                            <div>
-                                <label for="mensaje">
-                                    Mensaje | Message | Mezua
-                                </label>
-                                <div>
-                                    <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
+            
+            <div class="row">
+                <div class="formulario col-lg-7 p-0">
+                    <form action="">
+                        <fieldset>
+                            <legend>
+                                <h2 class="subtitulo">
+                                    Contact Us | Contáctanos | Jarri gurekin harremanetan
+                                </h2>
+                            </legend>
+                            <div class="camposFormulario p-3">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name | Nombre | Izena</label>
+                                    <input type="text" class="form-control" id="name" placeholder="">
                                 </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="">
+                                </div>
+                                  <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje | Message | Mezua</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  </div> 
+                                  <button type="button" class="btn btn-dark">  Send </button>
+                
                             </div>
-                            <div class="boton">
-                                <input type="submit" value="Send">
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </main>
        <!-- Pie de página -->
