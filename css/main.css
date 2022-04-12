@@ -13,74 +13,59 @@ html{
 
 /* Elemento raiz de la página */
 .bodyContenido{
-    display: grid;
-    grid-template-areas: "header"
-                         "content"
-                         "footer";
     background-color: #252424;
     background-image: url('../img/fondo.jpg');
     font-family: 'Oswald', sans-serif;
+    color: black;
 }
+
+header {
+    background-image: linear-gradient(to bottom, #460101, #5c0101);
+
+
+}
+
+
 
 
 /* Logo y navegación */
-header {
-    grid-area: header;
-    background-image: linear-gradient(to bottom, #460101, #5c0101);
-    position: sticky;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 99;
 
-}
-
-
-header h1{
-    vertical-align: top;
-    color: #e9e5e5;
-    padding: 7px;
-    display: inline-block;
-}
-
-.titulo .logo{
+.navbar img{
     display: flex;
     display: inline-block;
     width: 50px;
     margin: 10px;
 }
 
-
-.titulo{
-    justify-content: flex-start;
-    grid-area: titulo;
+.bodyContenido .navbar-brand{
+    color: #e9e5e5;
+    padding-top: 10px;
 }
 
-.menu ul{
-    display: inline;
-
+.bodyContenido .navbar-nav a.nav-item {
+    color: #e9e5e5;
 }
 
-.menu li{
-    display: inline;
-    font-size: 20px;
-    padding: 30px;
-}
-
-.menu li a{
-    text-decoration: none;
-    color: #cccaca;
-
-}
-
-.menu li a.activo{
-    color: #ffffff;
+.bodyContenido .navbar-nav a.nav-item.active {
+    color: #e9e5e5;
     text-shadow: 0 0 4px whitesmoke;
+}
+
+.bodyContenido header a{
+    vertical-align: top;
+    color: #e9e5e5;
+    display: inline-block;
+}
+
+.bodyContenido header button{
+    color: #e9e5e5;
+
 }
 
 main{
     grid-area: content;
+    /* compenzando por el fixed-top de header de bootstrap */
+    margin-top: 55px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -91,38 +76,12 @@ main{
     margin-bottom: 10px;
 }
 
-.hamburguesa{
-    display: none;
-}
-
 @media only screen and (min-width:768px) and (max-width: 1023px){
-    header{
-        flex-direction: column;
-    }
-    .menu{
-        padding-bottom: 5px;
-    }
     main{
         padding: 0;
     }
 }
 @media only screen and (max-width:767px){
-
-    header{
-        flex-direction: row;
-    }
-    .menu{
-        display: none;
-    }
-    .hamburguesa{
-        display: flex;
-        padding: 15px;
-    }
-
-    .hamburguesa img{
-        display: inline-block;
-        height: 30px;
-    }
     main{
         padding: 0;
     }
@@ -130,80 +89,21 @@ main{
 
 
 
-/* Index */
-#imgPrincipal{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    margin-bottom: 40px;
-}
-
-#imgPrincipal img{
-    width: 90%;
-
-}
-
 .videos{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
     background-image: linear-gradient(to right, #460101, #2e0101);
     padding: 30px 0;
 }
 
 .video iframe{
-    width: 560px; 
-    height: 315px;
+    width: 35em; 
+    height: 25em;
 
 }
 
-.tituloVideo{
-    justify-content: end;
-    width: 30%;
-    font-size: 40px;
-}
+.tituloVideo h2{
+    font-size: 4em;
+} 
 
-@media only screen and (min-width:768px) and (max-width: 1023px){
-    #imgPrincipal{
-        padding: 0;
-        margin: 0;
-
-    }
-
-    #imgPrincipal img{
-        width: 100vw;
-    }
-    .video iframe{
-        width: 28.7rem;
-    }
-}
-@media only screen and (max-width:767px){
-    #imgPrincipal{
-        padding: 0;
-        margin: 0;
-
-    }
-
-    #imgPrincipal img{
-        width: 100vw;
-    }
-
-    .videos{
-        flex-direction: column;
-        padding: 0;
-        align-items: center;
-    }
-    .tituloVideo{
-        width: unset;
-        font-size: 30px;
-    }
-    .video iframe{
-        width: 26rem;
-    }
-
-}
 
 /* Band info */
 .historia{
@@ -444,17 +344,10 @@ main{
 }
 
 /* Pie de página */
-footer{
-    display: flex;
-    grid-area: footer;
-    justify-content: space-between;
-    height: 2.5rem;
-
-}
 
 .logoInsta{
     vertical-align: middle;
-    height: 80%;
+    height: 30px;
     margin: 4px;
 }
 
@@ -466,30 +359,4 @@ footer{
 .copyright{
     margin-top: 8px;
     color: #cccaca;
-}
-
-@media only screen and (min-width:768px) and (max-width: 1023px){
-    footer div{
-        padding: 0;
-        display: flex;
-        width: 30%;
-    }
-    .linkInsta{
-        margin-top: 6px;
-    }
-
-} 
-
-@media only screen and (max-width:767px){
-    footer div{
-        padding: 0;
-        display: flex;
-        width: 30%;
-    }
-    .linkInsta{
-        margin-top: 6px;
-    }
-    .instagram .linkInsta{
-        display: none;
-    }
 }
