@@ -209,48 +209,6 @@ main{
     }
 }
 
-/* Eventos */
-.eventos{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-.evento{
-    display: flex;
-    flex-direction: column;
-    background-color: #460101;
-    width: 40%;
-    padding: 1rem;
-    margin: 3rem;
-}
-
-/* animaciones eventos */
-.evento:hover{
-    transform: scale(1.11);
-    transition: 1.7s;
-}
-.evento img{
-    width: 100%;
-}
-
-.evento p{
-    background-color: #cccaca;
-    padding: 3px;
-    text-align: center;
-}
-@media only screen and (min-width:768px) and (max-width: 1023px){
-    .evento{
-        width: 100%;
-    }
-}
-@media only screen and (max-width:767px){
-    .evento{
-        width: 100%;
-        padding: 0.7rem;
-        margin: 1rem;
-    }
-}
 
 
 /* Music */
