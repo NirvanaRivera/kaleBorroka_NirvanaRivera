@@ -25,6 +25,16 @@ header {
 
 }
 
+@media only screen and (max-width:767px){
+    main{
+        padding: 0;
+    }
+    .tituloPrincipal{
+        font-size: 30px;
+    }
+
+}
+
 
 
 
@@ -95,8 +105,8 @@ main{
 }
 
 .video iframe{
-    width: 35em; 
-    height: 25em;
+    width: 35rem; 
+    height: 25rem;
 
 }
 
@@ -288,4 +298,10 @@ main{
 .copyright{
     margin-top: 8px;
     color: #cccaca;
+}
+
+@media only screen and (max-width:767px){
+    .linkInsta span{
+        display: none;
+    }
 }
