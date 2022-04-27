@@ -1,1 +1,133 @@
 @import "pages/events";
+@import "pages/music";
+@import "pages/contact-us";
+@import "pages/index";
+@import "pages/band-info";
+
+/* reset */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+html{
+    background-color: black;
+}
+
+
+/* Elemento raiz de la página */
+.bodyContenido{
+    background-color: #252424;
+    background-image: url('../img/fondo.jpg');
+    font-family: 'Oswald', sans-serif;
+    color: black;
+
+    header {
+        background-image: linear-gradient(to bottom, $color-morado-solido, #5c0101);
+
+        /* Logo y navegación */
+        .navbar{
+
+            .navbar-brand{
+                color: $color-casi-blanco;
+                padding-top: 10px;
+            }
+
+            img{
+                display: flex;
+                display: inline-block;
+                width: 50px;
+                margin: 10px;
+            }
+
+            .navbar-nav a.nav-item {
+                color: $color-casi-blanco;
+                &.active {
+                    color: $color-casi-blanco;
+                    text-shadow: 0 0 4px whitesmoke;
+                }
+            }
+        }
+
+        a{
+            vertical-align: top;
+            color: $color-casi-blanco;
+            display: inline-block;
+        }
+
+        button{
+            color: $color-casi-blanco;
+        
+        }
+    }
+
+    @media only screen and (max-width:767px){
+        main{
+            padding: 0;
+        }
+
+        .tituloPrincipal{
+            font-size: 30px;
+        }
+    
+    }
+
+    main{
+        grid-area: content;
+        /* compenzando por el fixed-top de header de bootstrap */
+        margin-top: 4.2em;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .subtitulo{
+            color: $color-gris-claro;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media only screen and (min-width:768px) and (max-width: 1023px){
+        main{
+            padding: 0;
+        }
+    }
+    
+    @media only screen and (max-width:767px){
+        main{
+            padding: 0;
+        }
+    }
+    
+    /* Pie de página */
+    footer{
+        .logoInsta{
+            vertical-align: middle;
+            height: 30px;
+            margin: 4px;
+        }
+        
+        .linkInsta{
+            text-decoration: none;
+            color: $color-gris-claro;
+        }
+        
+        .copyright{
+            margin-top: 8px;
+            color: $color-gris-claro;
+        } 
+        
+        @media only screen and (max-width:767px){
+            .linkInsta span{
+                display: none;
+            }
+        }   
+    }
+}
+
+
+
+
+
+

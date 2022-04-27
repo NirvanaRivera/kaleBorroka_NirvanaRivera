@@ -1,0 +1,19 @@
+/* Contact Us */
+
+.formulario{
+    background-color: $color-gris-claro;
+
+    .subtitulo{
+        padding: 0.6rem;
+    }
+
+    legend{
+        background-image: linear-gradient(to right, $color-morado-solido, #2e0101);
+        width: 100%;
+        margin: 0;
+    }
+
+    @media only screen and (max-width:767px){
+        margin-top: 1rem;
+    }
+}

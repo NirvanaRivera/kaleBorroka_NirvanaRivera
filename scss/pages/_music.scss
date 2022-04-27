@@ -1,0 +1,50 @@
+
+
+/* Music */
+.canciones{
+    display: flex;
+    flex-wrap: wrap;
+
+    .cancion{
+        display: flex;
+        flex-direction: column;
+        background-color: $color-gris-claro;
+        margin: 1.25rem;
+        width: 21rem;
+
+        .tituloCancion{
+            background-image: linear-gradient(to right, $color-morado-solido, #2e0101);
+            padding: 0.2rem;
+            color: $color-gris-claro;
+        
+        }
+
+        .letraCancion{
+            padding: 0.2rem;
+            overflow-y: scroll;
+            height: 21rem;
+        }
+
+        .reproductor audio{
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width:767px){
+        .cancion{
+            width: 100%;
+        }
+        
+        .letraCancion{
+            height: auto;
+            overflow: unset;
+        }
+    }
+    
+}
+
+
+
+
+
+
+

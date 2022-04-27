@@ -5,7 +5,9 @@
 .eventos{
     @include flex-row;
     align-items: flex-start;
+    flex-wrap: wrap;
 
+    
     .evento{
         display: flex;
         flex-direction: column;

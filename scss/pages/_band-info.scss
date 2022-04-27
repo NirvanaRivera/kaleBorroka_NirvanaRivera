@@ -1,0 +1,102 @@
+/* Band info */
+.historia{
+    @include flex-row;
+    
+    .historiaTexto{
+        color: $color-gris-claro;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        border-top: 1px solid $color-gris-claro;
+
+        h2{
+            margin-bottom: 0.6rem;
+        }
+        
+        p{
+            width: 70%;
+        }
+    }
+
+    .historiaImagen{
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        background-color: $color-morado-solido;
+        width: 39%;
+        text-align: center;
+        padding: 1.5rem;
+
+        img{
+            width: 60%;    
+            align-self: center;
+
+            &:hover{
+                transform: scale(1.15);
+                transition: 1.7s;
+            }
+        }
+        div{
+            display: none;
+        }
+    }
+
+    @for $i from 1 to 4 {
+        &:nth-child(#{$i}) .historiaImagen div {
+            background-image: url(../img/foto#{$i}.jpg);
+        }
+        
+    }
+
+    @media only screen and (min-width:768px) and (max-width: 1023px){
+        .historiaTexto{
+            padding-left: 2rem;
+        }
+        .historiaImagen{
+            margin: 1rem;
+            width: 60%;
+            align-self: center;
+            
+        }
+    }
+
+    @media only screen and (max-width:767px){
+        flex-direction: column-reverse;
+        margin-bottom: 3rem;
+        h2{
+            display: none;
+        }
+        .historiaTexto{
+            width: 100%;
+            padding: 1rem;
+
+            p{
+                width: 100%;
+            }
+        }
+
+        .historiaImagen{
+            padding: 0;
+            width: 100%;
+
+            img{
+                display: none;
+            }
+
+            div{
+                display: block;
+                width: 100%;
+                height: 10rem;
+                background-size: cover;
+                font-size: 5rem;
+                color: $color-gris-claro;
+                text-shadow: 0 0 5px black;
+                padding-top: 0.6rem;
+            }
+        }
+    }
+}
+
+
+
+
