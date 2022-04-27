@@ -1,7 +1,7 @@
 {
   "name": "kaleborroka_nirvanarivera",
   "version": "1.0.0",
-  "description": "",
+  "description": "Pagina web de la Banda Kale-Borroka",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
