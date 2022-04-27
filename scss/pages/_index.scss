@@ -1,7 +1,9 @@
+@import "../extends";
+
 /* Index */
 
 .videos{
-    background-image: linear-gradient(to right, $color-morado-solido, #2e0101);
+    @extend %gradiente;
     padding: 30px 0;
 
     iframe{

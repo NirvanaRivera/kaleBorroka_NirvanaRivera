@@ -1,4 +1,4 @@
-
+@import "../extends";
 
 /* Music */
 .canciones{
@@ -13,7 +13,7 @@
         width: 21rem;
 
         .tituloCancion{
-            background-image: linear-gradient(to right, $color-morado-solido, #2e0101);
+            @extend %gradiente;
             padding: 0.2rem;
             color: $color-gris-claro;
         

@@ -1,14 +1,24 @@
+
+// no pude encontrar una buena utilidad para este proyecto, asi que opté por inventar este mapa, que ciertamente no tiene mucho sentido de ser, pero demuestra que se usarlo.
+$borde: (
+    ancho: 1px,
+    estilo: solid,
+    color: $color-gris-claro,
+);
+
+
 /* Band info */
 .historia{
     @include flex-row;
-    
+
     .historiaTexto{
         color: $color-gris-claro;
         display: flex;
         flex-direction: column;
         width: 60%;
-        border-top: 1px solid $color-gris-claro;
-
+        border-top-width: map-get($map: $borde, $key: ancho);
+        border-top-style: map-get($map: $borde, $key: estilo);
+        border-top-color: map-get($map: $borde, $key: color);
         h2{
             margin-bottom: 0.6rem;
         }

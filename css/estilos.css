@@ -31,6 +31,9 @@
       padding: 0.7rem;
       margin: 1rem; } }
 
+.canciones .cancion .tituloCancion, .formulario legend, .videos {
+  background-image: linear-gradient(to right, #460101, #2e0101); }
+
 /* Music */
 .canciones {
   display: flex;
@@ -42,7 +45,6 @@
     margin: 1.25rem;
     width: 21rem; }
     .canciones .cancion .tituloCancion {
-      background-image: linear-gradient(to right, #460101, #2e0101);
       padding: 0.2rem;
       color: #cccaca; }
     .canciones .cancion .letraCancion {
@@ -58,22 +60,26 @@
       height: auto;
       overflow: unset; } }
 
+.canciones .cancion .tituloCancion, .formulario legend, .videos {
+  background-image: linear-gradient(to right, #460101, #2e0101); }
+
 /* Contact Us */
 .formulario {
   background-color: #cccaca; }
   .formulario .subtitulo {
     padding: 0.6rem; }
   .formulario legend {
-    background-image: linear-gradient(to right, #460101, #2e0101);
     width: 100%;
     margin: 0; }
   @media only screen and (max-width: 767px) {
     .formulario {
       margin-top: 1rem; } }
 
+.canciones .cancion .tituloCancion, .formulario legend, .videos {
+  background-image: linear-gradient(to right, #460101, #2e0101); }
+
 /* Index */
 .videos {
-  background-image: linear-gradient(to right, #460101, #2e0101);
   padding: 30px 0; }
   .videos iframe {
     width: 35rem;
